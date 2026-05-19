@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-05-19T18:13:43.380877" rpa="false" schemaversion="5">
+<suite id="s1" name="accountCreation" source="C:\Users\GokulakannanRangasam\PycharmProjects\DCORobot\tests\accountCreation.robot">
+<test id="s1-t1" name="End To End Account Creation" line="8">
+<kw name="Open browser and navigate to" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:43.765444" level="INFO">Opening browser 'chrome' to base url 'https://m.uat1.onlinebrokerage.cibc.com/dco/#/accountOpenPreLogin'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-19T18:13:43.765174" elapsed="9.700425"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-19T18:13:53.465959" elapsed="0.050026"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:53.526869" level="INFO">Page title is 'Open an account | CIBC Investor’s Edge'.</msg>
+<arg>${Pagetitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-05-19T18:13:53.516567" elapsed="0.010668"/>
+</kw>
+<arg>https://m.uat1.onlinebrokerage.cibc.com/dco/#/accountOpenPreLogin</arg>
+<arg>chrome</arg>
+<arg>Open an account | CIBC Investor’s Edge</arg>
+<status status="PASS" start="2026-05-19T18:13:43.764469" elapsed="9.762976"/>
+</kw>
+<kw name="Select Account Type" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=unauth-option</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-19T18:13:53.528459" elapsed="0.090517"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:53.619738" level="INFO">Clicking element 'id=unauth-option'.</msg>
+<arg>id=unauth-option</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:53.619327" elapsed="0.098815"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:53.718662" level="INFO">Clicking element 'xpath=//button[text()='Start application']'.</msg>
+<arg>xpath=//button[text()='Start application']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:53.718399" elapsed="0.081640"/>
+</kw>
+<status status="PASS" start="2026-05-19T18:13:53.527823" elapsed="0.272472"/>
+</kw>
+<kw name="Before we Begin Page" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=userConcent</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-19T18:13:53.801290" elapsed="1.132289"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:54.934158" level="INFO">Clicking element 'id=userConcent'.</msg>
+<arg>id=userConcent</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:54.933860" elapsed="0.130407"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:55.065917" level="INFO">Clicking element 'id=radio-third-party-no'.</msg>
+<arg>id=radio-third-party-no</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:55.064958" elapsed="0.094212"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:55.160755" level="INFO">Clicking element 'xpath=//button[text()='Start application']'.</msg>
+<arg>xpath=//button[text()='Start application']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:55.159911" elapsed="0.079068"/>
+</kw>
+<status status="PASS" start="2026-05-19T18:13:53.800657" elapsed="1.438723"/>
+</kw>
+<kw name="Choose Your Accounts" owner="keywords">
+<for flavor="IN">
+<iter>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=${id}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-19T18:13:55.241968" elapsed="1.100585"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:56.343916" level="INFO">Clicking element 'id=tfsaAccount'.</msg>
+<arg>id=${id}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:56.343168" elapsed="0.142020"/>
+</kw>
+<var name="${id}">tfsaAccount</var>
+<status status="PASS" start="2026-05-19T18:13:55.241451" elapsed="1.243993"/>
+</iter>
+<var>${id}</var>
+<value>tfsaAccount</value>
+<status status="PASS" start="2026-05-19T18:13:55.240815" elapsed="1.244776"/>
+</for>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:56.486165" level="INFO">Typing text 'EDGENC25' into text field 'id=promocode_input'.</msg>
+<arg>id=promocode_input</arg>
+<arg>EDGENC25</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:56.485816" elapsed="0.171939"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:56.658636" level="INFO">Clicking button 'xpath=//button[text()='Apply']'.</msg>
+<arg>xpath=//button[text()='Apply']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T18:13:56.658171" elapsed="0.094495"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[@id='submit_button']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-19T18:13:56.752965" elapsed="0.019599"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:56.774409" level="INFO">Sending key(s) ('ENTER',) to xpath=//button[@id='submit_button'] element.</msg>
+<msg time="2026-05-19T18:13:57.067660" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2026-05-19T18:13:57.067837" level="INFO">Releasing special key ENTER.</msg>
+<arg>xpath=//button[@id='submit_button']</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2026-05-19T18:13:56.773164" elapsed="0.317732"/>
+</kw>
+<status status="PASS" start="2026-05-19T18:13:55.240047" elapsed="1.851020"/>
+</kw>
+<kw name="Fill Introduce yourself form" owner="keywords">
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-05-19T18:13:57.092152" level="INFO">Selecting options from selection list 'id=title_select' by value 1.</msg>
+<msg time="2026-05-19T18:13:57.165913" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-19T18:13:57.166356" level="FAIL">List with locator 'id=title_select' not found.</msg>
+<arg>id=title_select</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="FAIL" start="2026-05-19T18:13:57.091840" elapsed="0.228578">List with locator 'id=title_select' not found.</status>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=primary_dob_month</arg>
+<arg>7</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.320718" elapsed="0.000119"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=primary_dob_day</arg>
+<arg>7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.320980" elapsed="0.000088"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=primary_dob_year</arg>
+<arg>2002</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.321191" elapsed="0.000079"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>id=primary_dob_year</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.321433" elapsed="0.000079"/>
+</kw>
+<kw name="Generate Valid SIN" owner="CustomLibrary">
+<var>${sin}</var>
+<status status="NOT RUN" start="2026-05-19T18:13:57.321644" elapsed="0.000082"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=sin_input</arg>
+<arg>${sin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.321836" elapsed="0.000077"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>id=sin_input</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.322028" elapsed="0.000067"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=sin_expiry_month</arg>
+<arg>7</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.322197" elapsed="0.000066"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=sin_expiry_year</arg>
+<arg>2030</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.322407" elapsed="0.000079"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=email_input</arg>
+<arg>gokulakannan0708@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.322592" elapsed="0.000069"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>id=email_input</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.322767" elapsed="0.000065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=ao_primaryPhone_input</arg>
+<arg>6789034567</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.322933" elapsed="0.000066"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<arg>id=ao_primaryPhone_input</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.323101" elapsed="0.000060"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=addressInput</arg>
+<arg>Toronto</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.323258" elapsed="0.000074"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=address1</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.323435" elapsed="0.000070"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=address0</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.323612" elapsed="0.000067"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=address1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.323779" elapsed="0.000060"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=ao_sameAddress_label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.323937" elapsed="0.000063"/>
+</kw>
+<kw name="Ensure English Language Preference" owner="keywords">
+<status status="NOT RUN" start="2026-05-19T18:13:57.324170" elapsed="0.000075"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.324356" elapsed="0.000073"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//button[text()=' Confirm ']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.324529" elapsed="0.000059"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[text()=' No ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.324684" elapsed="0.000062"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=country-dd</arg>
+<arg>98: 660</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.324843" elapsed="0.000067"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.325006" elapsed="0.000056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[text()=' No ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.325157" elapsed="0.000054"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=employmentStatus</arg>
+<arg>1: EMPFT</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.325301" elapsed="0.000070"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=occupationCategory_select</arg>
+<arg>1: 37</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.325468" elapsed="0.000065"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=occupations_select</arg>
+<arg>1: 1408</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.325626" elapsed="0.000063"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>id=occupationDetail_select</arg>
+<arg>39: 130</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.325785" elapsed="0.000063"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=employerName_input</arg>
+<arg>BMW</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.325941" elapsed="0.000063"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=addressInput</arg>
+<arg>Toronto</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.326097" elapsed="0.000060"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=address1</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.326257" elapsed="0.000059"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=address0</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.326417" elapsed="0.000055"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=address1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.326566" elapsed="0.000056"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>id=submit_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.326714" elapsed="0.000053"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=liquidAssets_input</arg>
+<arg>60000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.326859" elapsed="0.000064"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=fixedAssets_input</arg>
+<arg>40000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.327041" elapsed="0.000065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=liabilities_input</arg>
+<arg>5000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.327200" elapsed="0.000063"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=annualIncome_input</arg>
+<arg>200000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.327361" elapsed="0.000067"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=yearsInvestingInput</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.327525" elapsed="0.000058"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=yearsInvestingInput</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.327674" elapsed="0.000061"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=link_acc_radio-no</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.327831" elapsed="0.000057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=designateBeneficiary-radio-no</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.327979" elapsed="0.000056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=submit_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.328124" elapsed="0.000054"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=radio-primary-ctrl-no</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.328269" elapsed="0.000056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=radio-primary-insider-no</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.328425" elapsed="0.000058"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=radio-primary-Pro-no</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.328574" elapsed="0.000058"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=radio-objection-no</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.328726" elapsed="0.000059"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=radio-security-none</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.328912" elapsed="0.000073"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=id-physical</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.329101" elapsed="0.000068"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=submit_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.329279" elapsed="0.000062"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=ao_terms_label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.329439" elapsed="0.000056"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=tax_suppression_checkbox</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.329586" elapsed="0.000058"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=esign-physical</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.329750" elapsed="0.000054"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>id=submit_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.329925" elapsed="0.000064"/>
+</kw>
+<kw name="Register for online access" owner="keywords">
+<arg>messi007</arg>
+<arg>Welcome1</arg>
+<status status="NOT RUN" start="2026-05-19T18:13:57.330214" elapsed="0.000083"/>
+</kw>
+<status status="FAIL" start="2026-05-19T18:13:57.091456" elapsed="0.239215">List with locator 'id=title_select' not found.</status>
+</kw>
+<kw name="Capture account creation success" owner="keywords">
+<status status="NOT RUN" start="2026-05-19T18:13:57.330931" elapsed="0.000110"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-05-19T18:13:57.331174" elapsed="0.000073"/>
+</kw>
+<doc>Open accountOpenPreLogin page and simulate account creation flow</doc>
+<status status="FAIL" start="2026-05-19T18:13:43.763774" elapsed="13.567751">List with locator 'id=title_select' not found.</status>
+</test>
+<status status="FAIL" start="2026-05-19T18:13:43.398331" elapsed="13.934012"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="accountCreation" id="s1" pass="0" fail="1" skip="0">accountCreation</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-05-19T18:13:43.733126" level="ERROR">Error in file 'C:\Users\GokulakannanRangasam\PycharmProjects\DCORobot\tests\accountCreation.robot' on line 4: Variable file '..\variables\variables.py' does not exist.</msg>
+<msg time="2026-05-19T18:13:43.762180" level="ERROR">Error in file 'C:\Users\GokulakannanRangasam\PycharmProjects\DCORobot\resources\keywords.robot' on line 3: Variable file '..\variables\config.py' does not exist.</msg>
+</errors>
+</robot>
